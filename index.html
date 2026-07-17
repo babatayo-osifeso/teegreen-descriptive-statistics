@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Teegreen Descriptive Statistics</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="card">
+
+<h1>Teegreen Descriptive Statistics</h1>
+
+<p class="subtitle">
+A simple and powerful descriptive statistics tool for students, researchers, and professionals.
+</p>
+
+<div class="input-box">
+
+<label for="dataInput">
+Enter Values
+</label>
+
+<textarea
+id="dataInput"
+placeholder="Example: 10, 20, 30, 40, 50"></textarea>
+
+</div>
+
+<p id="message" class="message"></p>
+
+<button onclick="calculateStatistics()">
+Calculate
+</button>
+
+<button class="clear" onclick="clearData()">
+Clear
+</button>
+
+<div class="results">
+
+<h2>Results</h2>
+
+<div class="result-grid">
+
+<div>
+<h3>Number of Observations (n)</h3>
+<p id="count">-</p>
+</div>
+
+<div>
+<h3>Mean</h3>
+<p id="mean">-</p>
+</div>
+
+<div>
+<h3>Median</h3>
+<p id="median">-</p>
+</div>
+
+<div>
+<h3>Mode</h3>
+<p id="mode">-</p>
+</div>
+
+<div>
+<h3>Minimum</h3>
+<p id="min">-</p>
+</div>
+
+<div>
+<h3>Maximum</h3>
+<p id="max">-</p>
+</div>
+
+<div>
+<h3>Range</h3>
+<p id="range">-</p>
+</div>
+
+<div>
+<h3>Variance</h3>
+<p id="variance">-</p>
+</div>
+
+<div>
+<h3>Sample SD</h3>
+<p id="sd">-</p>
+</div>
+
+<div>
+<h3>Coefficient of Variation (CV)</h3>
+<p id="cv">-</p>
+</div>
+
+<div>
+<h3>Mean ± SD</h3>
+<p id="meanSD">-</p>
+</div>
+
+</div>
+
+<button onclick="copyResults()" class="copy-btn">
+Copy Results
+</button>
+
+<button onclick="downloadPDF()" class="download-btn">
+    Download PDF
+</button>
+
+</div>
+
+<footer>
+Built with ❤️ by
+<a href="https://wa.me/2347072036842" target="_blank">
+Teegreen Tech
+</a>
+</footer>
+
+</div>
+
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
