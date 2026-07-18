@@ -31,13 +31,15 @@ body{
 
 .card{
 
-    background:#ffffff;
+background:#ffffff;
 
-    padding:35px;
+padding:30px;
 
-    border-radius:25px;
+border-radius:12px;
 
-    box-shadow:0 20px 40px rgba(0,0,0,.2);
+border:1px solid #e5e7eb;
+
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
 
 }
 
@@ -155,7 +157,7 @@ button{
 
     border:none;
 
-    border-radius:12px;
+    border-radius:8px;
 
     background:#10b981;
 
@@ -253,7 +255,10 @@ button:hover{
 
     padding:18px;
 
-    border-radius:15px;
+    border-radius:8px;
+    
+    border:1px solid #e5e7eb;
+
 
     text-align:center;
 
@@ -285,6 +290,73 @@ button:hover{
 
 }
 
+.info-section{
+
+    background:white;
+
+    margin-top:30px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.1);
+
+}
+
+
+.info-section h2{
+
+    color:#065f46;
+
+    margin-bottom:15px;
+
+    margin-top:25px;
+
+}
+
+
+.info-section p{
+
+    color:#475569;
+
+    line-height:1.7;
+
+    margin-bottom:15px;
+
+}
+
+
+.info-section li{
+
+    color:#475569;
+
+    margin-bottom:10px;
+
+    line-height:1.6;
+
+}
+
+.example-result{
+
+    background:#ecfdf5;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    margin-top:15px;
+
+}
+
+
+.example-result p{
+
+    margin-bottom:10px;
+
+}
+
+
 footer{
 
     margin-top:30px;
@@ -308,6 +380,40 @@ footer a{
 }
 
 footer a:hover{
+
+    text-decoration:underline;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+
+    margin-bottom:15px;
+
+}
+
+
+.footer-links a{
+
+    color:#065f46;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    font-size:14px;
+
+}
+
+
+.footer-links a:hover{
 
     text-decoration:underline;
 

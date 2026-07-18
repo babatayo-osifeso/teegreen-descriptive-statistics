@@ -44,30 +44,38 @@ function calculateStatistics(){
 
     }
 
-    const frequency = {};
+    // Mode
 
-    values.forEach(value=>{
+const frequency = {};
 
-        frequency[value] = (frequency[value] || 0) + 1;
+values.forEach(value => {
 
-    });
+    frequency[value] = (frequency[value] || 0) + 1;
 
-    let maxFrequency = Math.max(...Object.values(frequency));
+});
 
-    let mode;
 
-    if(maxFrequency === 1){
+const maxFrequency = Math.max(...Object.values(frequency));
 
-        mode = "No mode";
 
-    }else{
+const modes = Object.keys(frequency)
+    .filter(value => frequency[value] === maxFrequency);
 
-        mode = Object.keys(frequency)
-        .filter(value => frequency[value] === maxFrequency)
-        .join(", ");
 
-    }
+let mode;
 
+
+if(maxFrequency === 1){
+
+    mode = "No mode";
+
+}
+
+else{
+
+    mode = modes.join(", ");
+
+}
     const minimum = sortedValues[0];
 
     const maximum = sortedValues[n-1];
@@ -88,7 +96,7 @@ function calculateStatistics(){
 
     const sampleSD = Math.sqrt(variance);
 
-    const cv = mean === 0 ? 0 : (sampleSD / mean) * 100;
+    const cv = mean === 0 ? "N/A" : ((sampleSD / Math.abs(mean)) * 100);
 
     const meanSD = `${mean.toFixed(3)} ± ${sampleSD.toFixed(3)}`;
 
